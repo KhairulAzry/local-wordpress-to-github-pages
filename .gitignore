@@ -137,5 +137,5 @@ dist
 
 # Ignore Docker volumes and system files
 db_data/
-wp-content/uploads/
+wp-content/
 *.log
