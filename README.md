@@ -20,7 +20,7 @@ Make sure the following are installed on your system:
 ### 🧑‍💻 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/local-wordpress-to-github-pages.git
+git clone https://github.com/khairulazry/local-wordpress-to-github-pages.git
 cd local-wordpress-to-github-pages
 ```
 
@@ -58,6 +58,7 @@ http://localhost:8000
 ├── package.json       # NPM scripts
 └── README.md
 ```
+
 ---
 
 ## 🧰 Available Commands
@@ -65,4 +66,28 @@ http://localhost:8000
 | ----------- | ----------- |
 | `npm start` | Starts Docker containers for WordPress + MySQL |
 | `npm run stop` | Stops all running Docker containers |
-| `npm run build` |Exports static site to `./docs` (includes CNAME)|
+| `npm run build` |Exports static site to `./docs` (includes CNAME if available)|
+
+---
+
+## 🛠 Static Site Export
+To generate a static version of your WordPress site:
+```bash
+npm run build
+```
+- Output will be placed in the `/docs` folder
+- A `CNAME` file with `www.yourdomainname.com` will be created for GitHub Pages (if you set a CNAME inside `scripts/export.sh`)
+
+---
+
+## 🌐 GitHub Pages Deployment
+1. Push your repo to GitHub
+2. In GitHub → Repo Settings → Pages:
+    1. Source: `Deploy from branch`
+    2. Branch: `main` (or `master`)
+    3. Folder: `/docs`
+> ✅ After a few minutes, your static site will be live at https://yourusername.github.io/your-repo-name/
+---
+
+## 👤 Author
+[Khairul Azry](https://www.khairulazry.com/)
