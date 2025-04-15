@@ -134,3 +134,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Ignore Docker volumes and system files
+db_data/
+wp-content/uploads/
+*.log
